@@ -38,12 +38,12 @@ export default function ConfidenceGauge({ score, label }: ConfidenceGaugeProps) 
   };
 
   return (
-    <div className="glass-panel p-6 rounded-xl border-border/40 flex flex-col items-center justify-center space-y-4 text-center min-h-[220px]">
+    <div className="glass-panel p-4.5 rounded-xl border-border/40 flex flex-col items-center justify-center space-y-3.5 text-center min-h-[190px]">
       <span className="text-[9px] font-mono text-muted-foreground uppercase tracking-widest font-black block">
         Consensus Confidence Gauge
       </span>
 
-      <div className="relative flex items-center justify-center w-36 h-36">
+      <div className="relative flex items-center justify-center w-28 h-28">
         <svg className="w-full h-full transform -rotate-90" viewBox="0 0 120 120">
           <defs>
             {/* Color Gradients for Gauge */}
@@ -93,18 +93,18 @@ export default function ConfidenceGauge({ score, label }: ConfidenceGaugeProps) 
 
         {/* Center Text */}
         <div className="absolute inset-0 flex flex-col items-center justify-center space-y-0.5">
-          <span className="text-3xl font-mono font-black text-white tracking-tighter">
+          <span className="text-2xl font-mono font-black text-white tracking-tighter">
             {score}%
           </span>
-          <span className="text-[8px] font-mono text-muted-foreground uppercase tracking-widest font-black">
+          <span className="text-[7px] font-mono text-muted-foreground uppercase tracking-widest font-black">
             CONFIDENCE
           </span>
         </div>
       </div>
 
       <div className="flex flex-col items-center gap-1">
-        <span className="text-[9px] font-mono text-muted-foreground uppercase tracking-wider">Consensus recommendation</span>
-        <span className={`text-xs font-mono font-black tracking-wider uppercase border px-3 py-1.5 rounded-lg shadow-sm ${getTextColorClass(label)}`}>
+        <span className="text-[8px] font-mono text-muted-foreground uppercase tracking-wider">Consensus recommendation</span>
+        <span className={`text-[11px] font-mono font-black tracking-wider uppercase border px-2.5 py-1 rounded-lg shadow-sm ${getTextColorClass(label)}`}>
           {label}
         </span>
       </div>
