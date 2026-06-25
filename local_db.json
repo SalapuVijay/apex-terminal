@@ -326,6 +326,185 @@
       "createdAt": "2026-06-24T09:42:20.628Z"
     },
     {
+      "symbol": "NVDA",
+      "name": "NVIDIA Corporation",
+      "recommendation": "STRONG BUY",
+      "confidenceScore": 92,
+      "combinedScore": 85,
+      "scores": {
+        "financials": 94,
+        "growth": 100,
+        "sentiment": 90,
+        "competitive": 80,
+        "risk": 70
+      },
+      "overview": {
+        "industry": "Semiconductors & AI Computing",
+        "businessModel": "Design of Graphics Processing Units (GPUs), Tensor Core processors, and unified software (CUDA) for Artificial Intelligence, data centers, gaming, and professional visualization.",
+        "revenueSources": [
+          "Data Center & AI Compute (85%)",
+          "Gaming & Graphics (10%)",
+          "Professional Visualization & OEM (3%)",
+          "Automotive AI (2%)"
+        ],
+        "marketPosition": "De-facto monopoly in AI training and inference hardware with over 90% market share in enterprise-grade AI processors.",
+        "competitors": [
+          "AMD",
+          "Intel",
+          "Google (TPUs)",
+          "Amazon (Trainium)",
+          "Meta (MTIA)"
+        ]
+      },
+      "financials": {
+        "healthScore": 94,
+        "metrics": {
+          "revenueGrowthYOY": 125.4,
+          "netIncomeMargin": 48.8,
+          "operatingMargin": 54.1,
+          "epsGrowth": 132.8,
+          "debtToEquity": 0.12,
+          "freeCashFlow": 27000,
+          "roe": 62.4,
+          "roa": 41.2
+        },
+        "chartData": [
+          {
+            "year": "2021",
+            "revenue": 26914,
+            "profit": 9752
+          },
+          {
+            "year": "2022",
+            "revenue": 30974,
+            "profit": 4368
+          },
+          {
+            "year": "2023",
+            "revenue": 60922,
+            "profit": 29760
+          },
+          {
+            "year": "2024",
+            "revenue": 96300,
+            "profit": 53000
+          },
+          {
+            "year": "2025 (Est)",
+            "revenue": 120000,
+            "profit": 68000
+          }
+        ]
+      },
+      "sentiment": {
+        "score": 90,
+        "summary": "Incredibly strong sentiment driven by the unstoppable AI infrastructure buildout. Tech giants are ordering hundreds of thousands of Blackwell GPUs, and enterprise demand shows zero signs of abating.",
+        "sources": [
+          {
+            "source": "Bloomberg",
+            "title": "Nvidia CEO claims Blackwell demand is insane",
+            "sentiment": "positive"
+          },
+          {
+            "source": "News",
+            "title": "Hyperscalers commit to higher AI infrastructure CAPEX in 2026",
+            "sentiment": "positive"
+          },
+          {
+            "source": "Reddit",
+            "title": "Nvidia CUDA is the real moat, AMD ROCm is too far behind",
+            "sentiment": "positive"
+          },
+          {
+            "source": "News",
+            "title": "US export restrictions on AI chips to China pose export headwinds",
+            "sentiment": "negative"
+          }
+        ]
+      },
+      "swot": {
+        "strengths": [
+          "Unbeatable software moat in CUDA, which lock developers into Nvidia hardware.",
+          "Advanced networking integration (Mellanox InfiniBand) optimizing server communications.",
+          "Exceptional profitability with gross margins exceeding 75%.",
+          "Fastest innovation cycle in the industry (annual new architecture releases)."
+        ],
+        "weaknesses": [
+          "High customer concentration, with the top 4 cloud providers accounting for 40% of sales.",
+          "Complete reliance on TSMC in Taiwan for high-end silicon fabrication.",
+          "Vulnerable to cyclical demand resets if AI application revenues fail to match CAPEX."
+        ],
+        "opportunities": [
+          "Expansion of sovereign AI computing initiatives globally.",
+          "Growth of autonomous driving chips (Orin/Thor) for next-gen vehicles.",
+          "NVIDIA AI Enterprise software licensing acting as high-margin recurring revenue."
+        ],
+        "threats": [
+          "Geopolitical conflict in the Taiwan Strait disrupting TSMC production.",
+          "In-house custom silicon programs from primary customers (Google, Amazon, Meta).",
+          "Severe US export control expansions limiting trade with Asian countries."
+        ]
+      },
+      "risk": {
+        "score": 70,
+        "businessRisks": [
+          "Geopolitical supply chain vulnerability in Taiwan.",
+          "High expectations baked into a triple-digit price-to-earnings expansion."
+        ],
+        "industryRisks": [
+          "Potential cooling of the AI infrastructure cycle.",
+          "Rapid chip design changes making past nodes obsolete."
+        ],
+        "economicRisks": [
+          "Global microchip supply imbalances causing temporary inventory drawdowns."
+        ],
+        "regulatoryRisks": [
+          "Anti-trust scrutiny regarding CUDA packaging and supply allocations."
+        ]
+      },
+      "hedgeFundOpinions": {
+        "warrenBuffett": {
+          "rating": "HOLD",
+          "score": 65,
+          "reasoning": "Nvidia has a marvelous moat in CUDA, but the semiconductor business is historically highly cyclical. While their pricing power is phenomenal right now, it invites massive capital chasing alternatives. I prefer companies that don't depend on rapid technological revolutions to remain profitable, though their ROE is undeniable."
+        },
+        "peterLynch": {
+          "rating": "STRONG BUY",
+          "score": 94,
+          "reasoning": "This is a superstar stock. 125% YoY revenue growth paired with nearly 50% net income margin is something you rarely see. They are selling the picks and shovels in a gold rush. Even better, their free cash flow yields are backed by immediate cash, not accounting tricks. Hold onto your winners."
+        },
+        "rayDalio": {
+          "rating": "BUY",
+          "score": 80,
+          "reasoning": "Nvidia is the core driver of the current global tech productivity cycle. Financially, they have built a massive cash war chest and have zero credit leverage concerns. Geopolitics is the singular massive risk here; any issue with TSMC halts Nvidia. Diversified sizing is required."
+        },
+        "cathieWood": {
+          "rating": "STRONG BUY",
+          "score": 99,
+          "reasoning": "Nvidia Blackwell is the foundation of the multi-trillion dollar cognitive AI revolution. CUDA is an impenetrable developer barrier. As agentic AI starts writing code, demand for GPU clusters will increase by orders of magnitude. Nvidia is the defining platform of this decade."
+        },
+        "riskManager": {
+          "rating": "HOLD",
+          "score": 60,
+          "reasoning": "Extreme valuation multiple and highly concentrated revenue client profiles. Keep position size capped at a moderate percentage, using stop-losses to guard against a sudden sector-wide AI CAPEX correction."
+        }
+      },
+      "debate": {
+        "pros": [
+          "Unbeatable ecosystem lock-in through the CUDA platform.",
+          "Massive free cash flow creation allowing share buybacks and R&D.",
+          "Dominant supply contracts locked in for the next 18 months."
+        ],
+        "cons": [
+          "Severe geographic risk with 100% of advanced packaging at TSMC.",
+          "Hyperscale clients are building competitive internal chips.",
+          "Valuation leaves zero margin for execution errors."
+        ],
+        "summary": "The debate hinges on whether Nvidia can maintain its 90% market share and high margins as big tech attempts to diversify GPU purchases."
+      },
+      "createdAt": "2026-06-25T06:52:32.848Z"
+    },
+    {
       "symbol": "AAPL",
       "name": "Apple Inc.",
       "recommendation": "HOLD",
@@ -504,186 +683,7 @@
         ],
         "summary": "The debate centers on whether Apple Intelligence can spark a multi-year iPhone upgrade supercycle to revive hardware growth."
       },
-      "createdAt": "2026-06-25T06:28:23.220Z"
-    },
-    {
-      "symbol": "NVDA",
-      "name": "NVIDIA Corporation",
-      "recommendation": "STRONG BUY",
-      "confidenceScore": 92,
-      "combinedScore": 85,
-      "scores": {
-        "financials": 94,
-        "growth": 100,
-        "sentiment": 90,
-        "competitive": 80,
-        "risk": 70
-      },
-      "overview": {
-        "industry": "Semiconductors & AI Computing",
-        "businessModel": "Design of Graphics Processing Units (GPUs), Tensor Core processors, and unified software (CUDA) for Artificial Intelligence, data centers, gaming, and professional visualization.",
-        "revenueSources": [
-          "Data Center & AI Compute (85%)",
-          "Gaming & Graphics (10%)",
-          "Professional Visualization & OEM (3%)",
-          "Automotive AI (2%)"
-        ],
-        "marketPosition": "De-facto monopoly in AI training and inference hardware with over 90% market share in enterprise-grade AI processors.",
-        "competitors": [
-          "AMD",
-          "Intel",
-          "Google (TPUs)",
-          "Amazon (Trainium)",
-          "Meta (MTIA)"
-        ]
-      },
-      "financials": {
-        "healthScore": 94,
-        "metrics": {
-          "revenueGrowthYOY": 125.4,
-          "netIncomeMargin": 48.8,
-          "operatingMargin": 54.1,
-          "epsGrowth": 132.8,
-          "debtToEquity": 0.12,
-          "freeCashFlow": 27000,
-          "roe": 62.4,
-          "roa": 41.2
-        },
-        "chartData": [
-          {
-            "year": "2021",
-            "revenue": 26914,
-            "profit": 9752
-          },
-          {
-            "year": "2022",
-            "revenue": 30974,
-            "profit": 4368
-          },
-          {
-            "year": "2023",
-            "revenue": 60922,
-            "profit": 29760
-          },
-          {
-            "year": "2024",
-            "revenue": 96300,
-            "profit": 53000
-          },
-          {
-            "year": "2025 (Est)",
-            "revenue": 120000,
-            "profit": 68000
-          }
-        ]
-      },
-      "sentiment": {
-        "score": 90,
-        "summary": "Incredibly strong sentiment driven by the unstoppable AI infrastructure buildout. Tech giants are ordering hundreds of thousands of Blackwell GPUs, and enterprise demand shows zero signs of abating.",
-        "sources": [
-          {
-            "source": "Bloomberg",
-            "title": "Nvidia CEO claims Blackwell demand is insane",
-            "sentiment": "positive"
-          },
-          {
-            "source": "News",
-            "title": "Hyperscalers commit to higher AI infrastructure CAPEX in 2026",
-            "sentiment": "positive"
-          },
-          {
-            "source": "Reddit",
-            "title": "Nvidia CUDA is the real moat, AMD ROCm is too far behind",
-            "sentiment": "positive"
-          },
-          {
-            "source": "News",
-            "title": "US export restrictions on AI chips to China pose export headwinds",
-            "sentiment": "negative"
-          }
-        ]
-      },
-      "swot": {
-        "strengths": [
-          "Unbeatable software moat in CUDA, which lock developers into Nvidia hardware.",
-          "Advanced networking integration (Mellanox InfiniBand) optimizing server communications.",
-          "Exceptional profitability with gross margins exceeding 75%.",
-          "Fastest innovation cycle in the industry (annual new architecture releases)."
-        ],
-        "weaknesses": [
-          "High customer concentration, with the top 4 cloud providers accounting for 40% of sales.",
-          "Complete reliance on TSMC in Taiwan for high-end silicon fabrication.",
-          "Vulnerable to cyclical demand resets if AI application revenues fail to match CAPEX."
-        ],
-        "opportunities": [
-          "Expansion of sovereign AI computing initiatives globally.",
-          "Growth of autonomous driving chips (Orin/Thor) for next-gen vehicles.",
-          "NVIDIA AI Enterprise software licensing acting as high-margin recurring revenue."
-        ],
-        "threats": [
-          "Geopolitical conflict in the Taiwan Strait disrupting TSMC production.",
-          "In-house custom silicon programs from primary customers (Google, Amazon, Meta).",
-          "Severe US export control expansions limiting trade with Asian countries."
-        ]
-      },
-      "risk": {
-        "score": 70,
-        "businessRisks": [
-          "Geopolitical supply chain vulnerability in Taiwan.",
-          "High expectations baked into a triple-digit price-to-earnings expansion."
-        ],
-        "industryRisks": [
-          "Potential cooling of the AI infrastructure cycle.",
-          "Rapid chip design changes making past nodes obsolete."
-        ],
-        "economicRisks": [
-          "Global microchip supply imbalances causing temporary inventory drawdowns."
-        ],
-        "regulatoryRisks": [
-          "Anti-trust scrutiny regarding CUDA packaging and supply allocations."
-        ]
-      },
-      "hedgeFundOpinions": {
-        "warrenBuffett": {
-          "rating": "HOLD",
-          "score": 65,
-          "reasoning": "Nvidia has a marvelous moat in CUDA, but the semiconductor business is historically highly cyclical. While their pricing power is phenomenal right now, it invites massive capital chasing alternatives. I prefer companies that don't depend on rapid technological revolutions to remain profitable, though their ROE is undeniable."
-        },
-        "peterLynch": {
-          "rating": "STRONG BUY",
-          "score": 94,
-          "reasoning": "This is a superstar stock. 125% YoY revenue growth paired with nearly 50% net income margin is something you rarely see. They are selling the picks and shovels in a gold rush. Even better, their free cash flow yields are backed by immediate cash, not accounting tricks. Hold onto your winners."
-        },
-        "rayDalio": {
-          "rating": "BUY",
-          "score": 80,
-          "reasoning": "Nvidia is the core driver of the current global tech productivity cycle. Financially, they have built a massive cash war chest and have zero credit leverage concerns. Geopolitics is the singular massive risk here; any issue with TSMC halts Nvidia. Diversified sizing is required."
-        },
-        "cathieWood": {
-          "rating": "STRONG BUY",
-          "score": 99,
-          "reasoning": "Nvidia Blackwell is the foundation of the multi-trillion dollar cognitive AI revolution. CUDA is an impenetrable developer barrier. As agentic AI starts writing code, demand for GPU clusters will increase by orders of magnitude. Nvidia is the defining platform of this decade."
-        },
-        "riskManager": {
-          "rating": "HOLD",
-          "score": 60,
-          "reasoning": "Extreme valuation multiple and highly concentrated revenue client profiles. Keep position size capped at a moderate percentage, using stop-losses to guard against a sudden sector-wide AI CAPEX correction."
-        }
-      },
-      "debate": {
-        "pros": [
-          "Unbeatable ecosystem lock-in through the CUDA platform.",
-          "Massive free cash flow creation allowing share buybacks and R&D.",
-          "Dominant supply contracts locked in for the next 18 months."
-        ],
-        "cons": [
-          "Severe geographic risk with 100% of advanced packaging at TSMC.",
-          "Hyperscale clients are building competitive internal chips.",
-          "Valuation leaves zero margin for execution errors."
-        ],
-        "summary": "The debate hinges on whether Nvidia can maintain its 90% market share and high margins as big tech attempts to diversify GPU purchases."
-      },
-      "createdAt": "2026-06-25T06:52:32.848Z"
+      "createdAt": "2026-06-25T08:23:38.194Z"
     }
   ],
   "watchlist": [],

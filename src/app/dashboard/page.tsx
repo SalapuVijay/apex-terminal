@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import DashboardLayout from "@/components/DashboardLayout";
 import AgentFlow from "@/components/AgentFlow";
@@ -31,6 +31,8 @@ export default function Dashboard() {
   const [logs, setLogs] = useState<string[]>([]);
   const [report, setReport] = useState<IResearchReport | null>(null);
   const [error, setError] = useState<string | null>(null);
+  
+  const streamCompletedRef = useRef(false);
   
   // Watchlist status
   const [inWatchlist, setInWatchlist] = useState(false);
@@ -114,6 +116,7 @@ export default function Dashboard() {
 
   const startResearch = (symbolToResearch: string) => {
     if (!symbolToResearch) return;
+    streamCompletedRef.current = false;
     setLoading(true);
     setReport(null);
     setError(null);
@@ -141,6 +144,7 @@ export default function Dashboard() {
 
       eventSource.addEventListener("done", (e) => {
         try {
+          streamCompletedRef.current = true;
           const finalReport = JSON.parse(e.data) as IResearchReport;
           setReport(finalReport);
           setLoading(false);
@@ -157,6 +161,10 @@ export default function Dashboard() {
       });
 
       eventSource.addEventListener("error", (e) => {
+        if (streamCompletedRef.current) {
+          eventSource.close();
+          return;
+        }
         console.error("SSE stream error:", e);
         setError("Swarm connection interrupted. Please ensure dev server is running and try again.");
         setLogs((prev) => [...prev, "❌ Critical: Swarm error encountered. Closing execution channel."]);
