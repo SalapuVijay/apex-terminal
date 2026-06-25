@@ -1,6 +1,18 @@
 # APEX Terminal - Autonomous Multi-Agent Investment Intelligence Terminal
 
+[![Vercel Deployment](https://img.shields.io/badge/Deployment-Live-brightgreen?style=for-the-badge&logo=vercel)](https://apex-terminal-ten.vercel.app)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/SalapuVijay/apex-terminal.git)
+[![Next.js 15](https://img.shields.io/badge/Next.js-15.1.2-black?style=for-the-badge&logo=nextdotjs)](https://nextjs.org/)
+[![LangGraph.js](https://img.shields.io/badge/LangGraph.js-0.0.40-orange?style=for-the-badge)](https://github.com/langchain-ai/langgraphjs)
+
 APEX Terminal is an institutional-grade, multi-agent financial research workstation designed to evaluate equities and generate investment briefs. Running on parallel **LangGraph.js** decision pipelines, the terminal simulates an AI Hedge Fund Committee debate to evaluate equities, stream real-time logs, chart technical balance sheets, and export PDF research memos.
+
+---
+
+## 🌐 Live Production Links
+
+* **Live Workstation URL**: [https://apex-terminal-ten.vercel.app](https://apex-terminal-ten.vercel.app)
+* **GitHub Repository**: [https://github.com/SalapuVijay/apex-terminal.git](https://github.com/SalapuVijay/apex-terminal.git)
 
 ---
 
@@ -32,7 +44,7 @@ graph TD
         
         DebateNode -->|Step 7: Consensus| DecisionEngine[Decision Scoring Engine]
     end
-
+    
     subgraph Storage Layer
         DecisionEngine -->|Save Report| Mongo[(MongoDB Atlas / Local JSON)]
     end
@@ -50,7 +62,7 @@ graph TD
 4. **Bloomberg-Style Trading Grid**: Modern dashboard using curated color schemes, glassmorphic grids, Recharts, and animated gauges.
 5. **Portfolio Simulator**: Input capital values in INR/USD to compute diversified allocation weights based on Moat, Growth, and Risk metrics.
 6. **One-Click PDF Export**: Download formatted investment banking-grade reports containing executive summaries, SWOT assessments, and signature seals.
-7. **Zero-Dependency Fallbacks**: Automatically falls back to a high-fidelity stock simulator if external API keys or MongoDB connections are not provided.
+7. **Database Resiliency & Failover**: Built-in 2-second timeout connections. If MongoDB Atlas has firewall blocks or is offline, the backend instantly fails over to local database storage (`local_db.json`) ensuring uninterrupted user experiences.
 
 ---
 
@@ -62,6 +74,18 @@ graph TD
 - **LLM Engine**: Gemini 2.5 Pro (via Google Generative AI SDK).
 - **Database**: MongoDB Atlas via Mongoose (with local `local_db.json` file fallback).
 - **PDF Generation**: jsPDF.
+- **Analytics & Tracking**: Google Analytics 4 & Microsoft Clarity.
+
+---
+
+## 📈 Telemetry, Session Tracking & Analytics
+
+To facilitate growth monitoring and track recruiter behaviors, APEX Terminal integrates advanced user telemetry:
+
+* **Google Analytics 4**: Configured via Tag ID `G-2MPHQR6L39` to measure geographic traffic, acquisition channels, active sessions, and event interactions.
+  * **View Reports**: [Google Analytics Console](https://analytics.google.com/)
+* **Microsoft Clarity**: Connected via Project ID `xcgw4tte9o` to record complete user sessions, mouse movement patterns, scroll depths, and interface friction hotspots.
+  * **View Session Recordings & Heatmaps**: [Microsoft Clarity Console](https://clarity.microsoft.com/)
 
 ---
 
@@ -71,8 +95,9 @@ Ensure you have **Node.js 20+** installed.
 
 ### 1. Clone & Install Dependencies
 ```bash
-# Navigate to the project workspace
-cd C:\Users\salap\.gemini\antigravity\scratch\ai-investment-agent
+# Clone the repository
+git clone https://github.com/SalapuVijay/apex-terminal.git
+cd apex-terminal
 
 # Install dependencies
 npm install
@@ -87,10 +112,9 @@ GEMINI_API_KEY=your_gemini_api_key
 # Database Connection (Optional: Falls back to local_db.json file if omitted)
 MONGODB_URI=your_mongodb_connection_string
 
-# External Finance API Keys (Optional: Fallbacks active)
-NEWS_API_KEY=your_news_api_key
-FINNHUB_API_KEY=your_finnhub_key
-ALPHAVANTAGE_API_KEY=your_alphavantage_key
+# Telemetry IDs
+NEXT_PUBLIC_GA_ID=G-2MPHQR6L39
+NEXT_PUBLIC_CLARITY_ID=xcgw4tte9o
 ```
 
 ### 3. Run Development Server
@@ -120,21 +144,12 @@ Open **[http://localhost:3000](http://localhost:3000)** in your browser!
 
 ---
 
-## 📊 Example Output (Consensus Verdict)
-
-- **Tesla (TSLA)**:
-  - *Consensus Score*: 78 / 100
-  - *Recommendation*: **BUY** (Confidence: 84%)
-  - *Warren Buffett*: PASS ("Lacks traditional value moat, capital intensive auto industry.")
-  - *Cathie Wood*: STRONG BUY ("AI and robotics leader, FSD represents a multi-trillion dollar market.")
-  - *Ray Dalio*: HOLD ("Highly exposed to China supply chains and global interest rate cycles.")
-
----
-
 ## 🛠️ Key Trade-offs & Future Iterations
 
 - **Client-Side vs. Server-Side PDF**: We utilized client-side `jsPDF` rather than Puppeteer. Puppeteer requires heavy server headless browser installations which frequently crash on Serverless function platforms like Vercel. Client-side compilation is highly reliable and fast.
 - **SVG vs. React Flow**: We chose a custom SVG Framer Motion visualizer over React Flow. React Flow has peer-dependency mismatches with React 19, whereas SVG provides zero package dependency overhead, full responsiveness, and smooth rendering animations.
+- **Resilient MongoDB Connectors**: Configured `connectTimeoutMS: 2000` to prevent function cold starts from hanging indefinitely due to Atlas network firewalls.
 - **Future Roadmap**:
   - Add Vector Search (RAG) using Pinecone/FAISS to chat with historical SEC 10-K filings.
   - Implement Webhook integrations to email investors when a stock crosses a BUY threshold.
+
