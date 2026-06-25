@@ -591,11 +591,11 @@ export default function Dashboard() {
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Live Hedge Fund Mode opinion panel cards */}
-              <div className="border-t border-border/20 pt-8">
-                <HedgeFundPanel opinions={report.hedgeFundOpinions} />
+                {/* Live Hedge Fund Mode opinion panel cards (3-Span inside the Grid) */}
+                <div className="lg:col-span-3 border-t border-border/20 pt-8">
+                  <HedgeFundPanel opinions={report.hedgeFundOpinions} />
+                </div>
               </div>
             </motion.div>
           )}
