@@ -30,6 +30,15 @@ export default function HedgeFundPanel({ opinions }: HedgeFundPanelProps) {
 
   const fundMembers = [
     {
+      key: "rayDalio",
+      name: "Ray Dalio",
+      title: "Macro Strategist",
+      avatar: UserCheck,
+      style: "border-blue-500/20 text-blue-400 bg-blue-500/5",
+      avatarColor: "text-blue-400 bg-blue-950/30 border-blue-550/20",
+      description: "Appraises economic debt cycles, liquidity exposures, systemic risks, and currency fluctuations."
+    },
+    {
       key: "warrenBuffett",
       name: "Warren Buffett",
       title: "Value Advisor",
@@ -46,15 +55,6 @@ export default function HedgeFundPanel({ opinions }: HedgeFundPanelProps) {
       style: "border-emerald-500/20 text-emerald-400 bg-emerald-500/5",
       avatarColor: "text-emerald-400 bg-emerald-950/30 border-emerald-550/20",
       description: "Analyzes earnings consistency, PEG ratios, inventory management, and business model simplicity."
-    },
-    {
-      key: "rayDalio",
-      name: "Ray Dalio",
-      title: "Macro Strategist",
-      avatar: UserCheck,
-      style: "border-blue-500/20 text-blue-400 bg-blue-500/5",
-      avatarColor: "text-blue-400 bg-blue-950/30 border-blue-550/20",
-      description: "Appraises economic debt cycles, liquidity exposures, systemic risks, and currency fluctuations."
     },
     {
       key: "cathieWood",

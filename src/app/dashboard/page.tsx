@@ -417,7 +417,7 @@ export default function Dashboard() {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
                 
                 {/* Left & Middle Column (2-Span) */}
-                <div className="lg:col-span-2 space-y-8">
+                <div className="lg:col-span-2 space-y-8 self-start">
                   {/* Flow Visualizer (glowing SVG) */}
                   <AgentFlow activeNode="done" opinions={report.hedgeFundOpinions} />
 
@@ -551,7 +551,7 @@ export default function Dashboard() {
                 </div>
 
                 {/* Right Side Column (1-Span) */}
-                <div className="lg:col-span-1 space-y-8">
+                <div className="lg:col-span-1 space-y-8 self-start">
                   {/* Confidence meter gauge dial */}
                   <ConfidenceGauge score={report.confidenceScore} label={report.recommendation} />
 
