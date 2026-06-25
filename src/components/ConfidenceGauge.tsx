@@ -38,7 +38,7 @@ export default function ConfidenceGauge({ score, label }: ConfidenceGaugeProps) 
   };
 
   return (
-    <div className="glass-panel p-6 rounded-xl border-border/40 flex flex-col items-center justify-center space-y-4 text-center h-full min-h-[220px]">
+    <div className="glass-panel p-6 rounded-xl border-border/40 flex flex-col items-center justify-center space-y-4 text-center min-h-[220px]">
       <span className="text-[9px] font-mono text-muted-foreground uppercase tracking-widest font-black block">
         Consensus Confidence Gauge
       </span>
