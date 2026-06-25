@@ -22,7 +22,7 @@ APEX Terminal is an institutional-grade, multi-agent financial research workstat
 graph TD
     Client[Next.js 15 Client UI] <-->|Server-Sent Events & HTTPS| API[Next.js API Engine]
     
-    subgraph Multi-Agent Swarm (LangGraph)
+    subgraph "Multi-Agent Swarm (LangGraph)"
         API -->|Invoke Flow| Graph[LangGraph Dispatcher]
         
         Graph -->|Step 1| CompRes[Company Research Agent]
